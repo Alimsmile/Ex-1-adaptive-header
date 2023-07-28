@@ -1,55 +1,46 @@
 * {
-   box-sizing: border-box;
    margin: 0;
    padding: 0;
+   box-sizing: border-box;
+   list-style: none;
 }
 
-header {
-   height: 60px;
+body {
+   background-image: url(img/konez.jpg);
+   background-size: auto;
 }
 
-.container {
-   display: flex;
-   justify-content: space-between;
-   
-   border-bottom: 1px rgb(204, 191, 191) solid;
+.m_header > .container {
+   max-width: 1200px;
+   margin: 0 auto;  
+   padding-bottom: 5px;
+
+   background-color: white;
+   border-bottom: 1px grey solid;
+   border-radius: 0px 0px 5px 5px;
+}
+
+.logo {
+   max-width: 150px;
    margin: 0 auto;
-   max-width: 1100px;
-   height: 100%;
-}
-
-.container_logo {
    display: flex;
-   align-items: center;
-   max-width: 80px;
-   margin: 0 15px;
 }
 
-.container_logo > img {
+.logo img {
    width: 100%;
-   
+   margin: 7px 0;
 }
 
-.container > nav {
-   
-   
+nav {
+   border-top: 1px black solid;
+   padding-top: 5px;
 }
 
-.container ul {
-   display: flex;
-   flex-wrap: wrap;
-   align-items: center;
-   margin: auto 0;
-   height: 100%;
-}
-
-.container li {
-   margin: 0 5px;
+.m_header nav li {
    padding: 5px 15px;
    transition: 0.3s;
 
    color: grey;
-   border-radius: 5px;
    font-family: 'Courier New', Courier, monospace;
    font-weight: 600;
    list-style: none;
@@ -61,3 +52,57 @@ header {
    color: white;
    font-weight: 450;
 }
+
+@media screen and (max-width: 1200px) {
+   .m_header > .container {
+      max-width: none; 
+   }
+}
+
+@media screen and (max-width: 1100px) {
+   .logo {
+      max-width: 100px; 
+   }
+   .m_header nav li {
+      font-size: 14px;
+   }
+}
+
+@media screen and (max-width: 992px) {
+   .m_header nav li {
+      font-size: 12px;
+      padding: 5px 10px;
+   }
+}
+
+@media screen and (min-width: 768px) {
+   .m_header > .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding-bottom: 0px;
+   }
+   .logo {
+      margin: 0;
+   }
+   nav {
+      border-top: none;
+   }
+   .m_header nav ul {
+      display: flex; 
+   }
+
+   .m_header nav li {
+      margin: 0 5px;
+      border-radius: 5px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .m_header nav li {
+      font-size: 16px;
+      font-weight: 600;
+   }
+}
+
+
